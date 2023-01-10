@@ -6,8 +6,8 @@ pascal_triangle(n):  returns a list of lists of integers representing the Pascal
 
 def pascal_triangle(n):
     res = []
-    if int(n) <= 0:
-        return []
+    if type(n) != int or int(n) <= 0:
+        return res
     else:
         for i in range(0, n):
             box = []
