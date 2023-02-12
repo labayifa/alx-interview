@@ -11,7 +11,7 @@ if (idFilm !== undefined) {
       const characters = film.characters;
       for (character of characters) {
         await new Promise((resolve, reject)=> {
-          request(character, function (error, response, body){
+          request(character, function (error, response, body) {
             if (error) {
               reject(error);
             } else {
