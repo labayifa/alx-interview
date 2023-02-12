@@ -10,11 +10,10 @@ request(`https://swapi-api.alx-tools.com/api/films/${idFilm}`, async function (e
   }
 
   if (film !== undefined && Array.isArray(film.characters)) {
-
     const characters = film.characters;
 
     for (character of characters) {
-      await new Promise((resolve, reject)=> {
+      await new Promise((resolve, reject) => {
         request(character, function (error, response, body) {
           if (error) {
             reject(error);
@@ -22,7 +21,7 @@ request(`https://swapi-api.alx-tools.com/api/films/${idFilm}`, async function (e
             console.log(JSON.parse(body).name);
             resolve(body);
           }
-        })
+        });
       });
     }
   }
