@@ -23,7 +23,7 @@ request(`https://swapi-api.alx-tools.com/api/films/${idFilm}`, async function (e
             resolve(body);
           }
         })
-      })
+      });
     }
   }
 });
